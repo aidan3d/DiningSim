@@ -1,0 +1,38 @@
+Restaurant Simulation
+Overview
+The idea behind this program is to simulate activities in a restaurant. This simulation could be used by a manager to optimize the number of waitresses, tables, etc. to efficiently handle the flow of customers. This program should be designed to allow the user to customize the parameters of the simulation so that a restaurant manager of any restaurant could configure it to work for their restaurant. You should envision your program being used as a planning tool to help a restaurant manager/owner determine the amount of staff they need working during different times of the day or week based on their customer patterns. The simulation should run for at least 24 hours.
+Detailed Description
+This program should give users the option to create a file with a text editor that contains the parameters or use an interactive interface to set the parameters. The parameters that should be considered for this simulation include the following:
+1. Level of business. This is the combination of the rate at which people arrive and the size of their party
+slow - < 50% seated and at least 75% parties of 2 or less
+busy - at least 75% seated and 50% parties 2 or more
+slammed - 100% seated 75% parties of 3 or more
+(note: you may adjust these parameters within reason)
+2. The number of tables (seating 4 people maximum at a table and all tables have the same size). A restaurant can have as many tables as the user wants.
+3. The type of the restaurant. Cook time determines how long a table will be occupied. A restaurant is one of the following types:
+- Menu tiers - continental < 5 min.
+- bistro between 10 - 12 min.
+- gourmet > 15 - 30 min.
+4. Wait staff skill level. Each wait staff member must be given a skill level. This time is multiplied by the number of people in the party and added to the service time for thep party.
+- newbies - > 5 min/per person
+- seasoned - between 3 - 5 min/per person
+- professional - < 2 min/per person
+(note: you can determine how you want to distribute the skill level of wait staff)
+Input
+The input files for the configuration should have at least the following configuration for a restaurant:
+<name of restaurant>
+<level of business>
+<number of tables>
+<type of restuarant>
+You may add other features to this file. In addition, there should also be an option to interactively enter this data instead of using a a file.
+Output
+The output for this program should contain at least the following information:
+1. Output that describes activities in the simulation as it is running (see the bank teller program for ideas)
+2. A final report when simulation is complete that contains at least the following:
+The values of the configuration parameters
+The average waiting time for parties
+The average number of parties waiting for a table
+The average turnaround time: the time from when the party arrives to when they leave the restaurant
+You may add information to the output.
+References
+Restaurant Simulation: www.KnowledgeMatters.com/prosimbeta
