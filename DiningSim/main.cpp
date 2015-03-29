@@ -1,13 +1,7 @@
 //***********************************************************
-//              CIST2362 SECTION 40983                      *
-//              Assignment: Final Project : DiningSim       *
+//              D I N I N G   S I M                         *
 //                                                          *
-//              =====================================       *
-//                                                          *
-//              100% IMPLEMENTATION SUBMITTED 4-22-13       *
-//              =====================================       *
-//                                                          *
-// Author:      Hegarty, Aidan SID 3036                     *
+// Author:      Aidan Hegarty                               *
 //                                                          *
 // Description: Simulates a Restaurant. User configures     *
 //                a)  Restaurant's name                     *
@@ -36,7 +30,7 @@ int main()
 
 
 	// Pause the program while the user reads
-	// the output displayed on screen
+	// the output displayed on screen.
 	system("pause");
 	
 	return 0;

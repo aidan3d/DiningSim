@@ -62,6 +62,10 @@ namespace DiningSim			// Definition of the DiningSim
 			  displayMainMenu(); }			//   and run the main
 											//   menu display function
 
+		// menu display function
+		// 
+		// Accessors		// menu display function
+		// 
 		// Accessors
 		std::string getNameOfRestaurant() const
 			{ return m_strRestaurantName; }

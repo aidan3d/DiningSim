@@ -32,15 +32,15 @@ namespace DiningSim
 		
 		int  m_nServerSkillLevel;					// Server's 'skill 
 													// level:'
-													//   1 = newbie, x
+													//   1 = newbie
 													//   2 = seasoned
 													//   3 = professional
 													//
-													//   Distinguishes 
-													//   the min time 
-													//   interval to
-													//   take a guest's
-													//   order
+													//   Distinguished 
+													//   by the min. 
+													//   time interval
+													//   to take a
+													//   table's order
 
 
 		int m_nNumberOfGuestsServed;				// The number of guests
@@ -75,13 +75,24 @@ namespace DiningSim
 			   int nInputServerId, 
 			   std::string strInputServerLastName,
 			   int nInputServerSkillLevel)
-			{ m_bFree = true;
-			  m_nCutOrder = nInputCutOrder;
+			{ m_bFree                 = true;
+			  m_nCutOrder             = nInputCutOrder;
 			  m_nNumberOfGuestsServed = 0;
-			  m_nServerId = nInputServerId;
-			  m_strServerLastName = strInputServerLastName;
-			  m_nServerSkillLevel = nInputServerSkillLevel; }
-	
+			  m_nServerId             = nInputServerId;
+			  m_strServerLastName     = strInputServerLastName;
+			  m_nServerSkillLevel     = nInputServerSkillLevel; }
+
+		// Constructor #3
+		Server(int nInputServerId,
+			   int nInputServerSkillLevel,
+			   std::string strInputServerLastName)
+			{ m_bFree                 = true;
+			  m_nNumberOfGuestsServed = 0;
+			  m_nServerId             = nInputServerId;
+			  m_strServerLastName     = strInputServerLastName;
+			  m_nServerSkillLevel     = nInputServerSkillLevel; }
+
+
 		// Mutators
 		void addTableToHeadCount(					// Add the table
 			int nInputTableNumber,					//   currently being
@@ -112,7 +123,6 @@ namespace DiningSim
 		
 		int getServerSkillLevel() const
 			{ return m_nServerSkillLevel; }
-	
 };
 
 } // End of the DiningSim namespace definition

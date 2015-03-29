@@ -90,16 +90,16 @@ namespace DiningSim								// namespace declaration
 		std::vector<Server> m_vcServers;		// All servers currently
 												//   on the 'floor'
 
-		std::vector<int>    m_vnBusinessLevels;	// Likelyhood of a new
+		std::vector<int> m_vnBusinessLevels;	// Likelyhood of a new
 												//   party walking in
 												//   the 'front door'
 												//   of the restaurant
 
-		std::queue<Party>   m_qcTableWaitQueue;	// The 'wait list' for 
+		std::queue<Party> m_qcTableWaitQueue;	// The 'wait list' for 
 												//   parties waiting
 												//   for a table
 
-		std::queue<Table>   m_qcServerWaitQueue; // The 'wait list' for 
+		std::queue<Table> m_qcServerWaitQueue; // The 'wait list' for 
 												 //   'sat' tables who
 												 //   are waiting for 
 												 //   a server
@@ -284,13 +284,7 @@ namespace DiningSim								// namespace declaration
 		void startDiningSim();						// Chocks away!!
 													// Start the
 													// simulation
-	
-		protected:
-			// The 'wait list' for
-			std::queue<Party> m_qcTableWaitList;
-			// The 'wait list' for
-			std::queue<Table> m_qcServerWaitList;
-	};
+		};
 
 } // End of DiningSim namespace declaration
 

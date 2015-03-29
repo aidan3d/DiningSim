@@ -27,7 +27,6 @@ void DiningSim::Server::addTable(const Table &obj)
 
 }
 
-
 //*************************************************************
 // Name:        addTableToHeadCount                           *
 //                                                            *

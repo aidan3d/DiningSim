@@ -28,6 +28,8 @@ namespace DiningSim							// Define namespace DiningSim
 		unsigned int m_nServiceTime;		// Time the table was ordering
 											//    their food from the server
 
+		unsigned int m_nTimeOrdering;
+
 		Party        m_cParty;				// Party object
 
 
@@ -40,7 +42,7 @@ namespace DiningSim							// Define namespace DiningSim
 			  m_nSat = 0;
 			  m_nSeatsOccupied = 0;
 			  m_nServiceTime = 0;}
-		 
+
 		// Constructor #2
 		Table(int nInputTableNumber, unsigned int nInputTimeSat)
 			{ m_bFree = true;
@@ -48,6 +50,10 @@ namespace DiningSim							// Define namespace DiningSim
 		      m_nTableNumber = nInputTableNumber;
 			  m_nSeatsOccupied = 0;
 			  m_nServiceTime = 0; }
+
+		// Constructor #3
+		Table(int nInputTableNumber);
+
 			
 		// Accessors
 		unsigned int getTimeSeated() const		// Return time table
@@ -64,21 +70,26 @@ namespace DiningSim							// Define namespace DiningSim
 			{ return m_nSeatsOccupied; }
 		
 		// Mutators
-		void addServiceTime(int nInputServiceTime)		// Add time server
-			{ m_nServiceTime += nInputServiceTime; }	// needs to take
-														// party's order.
 
 		void addParty(const Party &obj);		// Start servicing 
 												//   the next party
-		
+
+		void addServiceTime(int nInputServiceTime)		// Add time server
+			{ m_nServiceTime += nInputServiceTime; }	//   needs to take
+														//   party's order
+
+		void addOrderTime(int nInputOrderTime);
+
+
 		void awaitingServer()					// Raise 'awaiting
 			{ m_bAwaitingServer = true;}		//   server' flag
+
 
 		bool doneOrdering()
 		{ return --m_nServiceTime == 0; }		// Return true if a
 												//   server is free
-		
-		
+
+
 		void greeted()							// Raise the signal flag
 			{ m_bAwaitingServer = false; }		//   to announce that
 												//   a server has been
@@ -89,9 +100,11 @@ namespace DiningSim							// Define namespace DiningSim
 		bool isFree();							// See if the Table 
 												//    is unoccupied
 		
+		void setTableNumber(int nInputTableNumber)
+			{ m_nTableNumber = nInputTableNumber; }
+
 		void setTimeSeated(unsigned int nInputTimeSeated)
 			{ m_nSat = nInputTimeSeated; }
-
 
 
 		// Overloaded operator functions
@@ -102,7 +115,7 @@ namespace DiningSim							// Define namespace DiningSim
 		bool operator == (const Table &obj)		// No two tables are
 			{ return false; }					//   alike ...so return
 												//   false if they are 
-												//   alike
+												//   alike		
 	};
 
 } // End of DiningSIm namespace definition
